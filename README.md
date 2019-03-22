@@ -7,7 +7,8 @@
 - Запускаем команду по установки сервера:
 
 ```
-ipa-server-install --setup-dns \
+ipa-server-install \
+--setup-dns \
 --no-host-dns \
 --hostname=ipa.freeipa-hw.lan \
 --domain=freeipa-hw.lan \
@@ -104,7 +105,12 @@ ipa dnsrecord-add freeipa-hw.lan client.freeipa-hw.lan --a-rec 192.168.11.102
 - Запустим настройку FREEIPA клиента:
 
 ```
-ipa-client-install --hostname=`hostname -f` --mkhomedir --server=ipa.freeipa-hw.lan --domain freeipa-hw.lan --realm FREEIPA-HW.LAN
+ipa-client-install \
+--hostname=`hostname -f` \
+--mkhomedir \
+--server=ipa.freeipa-hw.lan \
+--domain freeipa-hw.lan \
+--realm FREEIPA-HW.LAN
 ```
 На интерактивные вопросы отвечаем:
 ```
